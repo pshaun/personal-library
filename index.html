@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Personal Library</h1>
+    <button class=addBookBtn>ADD BOOK</button>
+    <div class="bookshelf">
+        <!-- <div class="book">
+            <div class="title">The Hobbit</div>
+            <div class="author">J.R.R. Tolkien</div>
+            <div class="pages">276 Pages</div>
+            <div class="readButton">Read</div>
+        </div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div> -->
+    </div>
+
+    <div class="createBookForm">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Book</h2>
+            <label for="ftitle">Title</label>
+            <input type="text" id="ftitle" placeholder="The Hobbit" name="title">
+            <label for="fauthor">Author</label>
+            <input type="text" id="fauthor" placeholder="J.R.R Tolkien" name="author">
+            <label for="fpages">Pages</label>
+            <input type="text" id="fpages" placeholder="265" name="pages">
+            <input type="submit" id="confirmBookBtn" value="ADD BOOK">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
