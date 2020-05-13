@@ -5,25 +5,23 @@ const span = document.getElementsByClassName("close")[0];
 
 let myLibrary = [];
 
-//localStorage.clear(); 
+// Used for debugging purposes
+// localStorage.clear(); 
 
 //Load library if local storage is not empty, otherwise initialize it with a few example books
 if(!localStorage.length){
-    console.log("Initialize array with 3 examples");
     const book1 = {
         title: 'To Kill A Mockingbird',
         author: 'Harper Lee',
         pages: '324',
         hasRead: true
     }
-
     const book2 = {
         title: 'Animal Farm',
         author: 'George Orwell',
         pages: '141',
         hasRead: true
     }
-
     const book3 = {
         title: 'Of Mice and Men',
         author: 'John Steinbeck',
@@ -33,7 +31,7 @@ if(!localStorage.length){
     addBookToLibrary(book1);
     addBookToLibrary(book2);
     addBookToLibrary(book3);
-} else{
+} else {
     loadLibrary();
 }
 
@@ -117,8 +115,10 @@ function createBookCard(book, index){
     
     title.textContent = book.title;
     title.classList.add('title');
+
     author.textContent = book.author;
     author.classList.add('author');
+
     pages.textContent = book.pages + " Pages";
     pages.classList.add('pages');
     
@@ -126,6 +126,7 @@ function createBookCard(book, index){
     bookCard.setAttribute('data-index', index);
     bookCard.append(removeBookBtn,title,author,pages,readBtn);
     bookCard.classList.add('book');
+
     return bookCard;
 }
 
